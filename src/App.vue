@@ -1,7 +1,12 @@
 <template>
   <section>
     <h2>Chart Widget</h2>
-    <Chart />
+     <Chart
+      :options="{
+        symbol: 'NYSE:DIS',
+        theme: 'dark',
+      }"
+     />
   </section>
   <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
 </template>
