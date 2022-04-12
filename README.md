@@ -17,6 +17,8 @@ EMA透過指數權重的調整，就越接近今日收盤價K棒將給更高的�
 
 EMA 比 SMA 更能提早發現行情轉向
 
+[widget/technical-analysis](https://www.tradingview.com/widget/technical-analysis/)
+
 
 ## Project setup
 ```

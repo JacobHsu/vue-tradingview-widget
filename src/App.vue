@@ -1,29 +1,35 @@
 <template>
   <section>
-    <h2>Chart Widget</h2>
      <Chart
       :options="{
         symbol: 'NYSE:DIS',
         theme: 'dark',
         studies: [
+          'BB@tv-basicstudies',
+          'CCI@tv-basicstudies', // Commodity Channel Index overbought/oversold
           'MACD@tv-basicstudies',
-          'MAExp@tv-basicstudies'
+          'MAExp@tv-basicstudies' // Moving Average Exponential
         ],
+        details: true,
       }"
      />
+  </section>
+  <section>
+    <TechnicalAnalysis :options="{interval: '1D', symbol:'NYSE:DIS', isTransparent: true, showIntervalTabs: false}" />
   </section>
   <!-- <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/> -->
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { Chart } from 'vue-tradingview-widgets';
+import { Chart, TechnicalAnalysis } from 'vue-tradingview-widgets';
 // import HelloWorld from './components/HelloWorld.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
     Chart,
+    TechnicalAnalysis,
     // HelloWorld
   }
 });
