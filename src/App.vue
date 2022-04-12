@@ -5,22 +5,26 @@
       :options="{
         symbol: 'NYSE:DIS',
         theme: 'dark',
+        studies: [
+          'MACD@tv-basicstudies',
+          'MAExp@tv-basicstudies'
+        ],
       }"
      />
   </section>
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <!-- <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/> -->
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { Chart } from 'vue-tradingview-widgets';
-import HelloWorld from './components/HelloWorld.vue';
+// import HelloWorld from './components/HelloWorld.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
     Chart,
-    HelloWorld
+    // HelloWorld
   }
 });
 </script>

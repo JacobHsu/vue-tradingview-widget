@@ -11,6 +11,13 @@
 [Error to load scss to Vue3 TypeError: this.getOptions is not a function](https://stackoverflow.com/questions/67623125/error-to-load-scss-to-vue3-typeerror-this-getoptions-is-not-a-function)
 change from "sass-loader": "^12.0.0" to "sass-loader": "^10.1.1"
 
+## widget studies
+
+EMA透過指數權重的調整，就越接近今日收盤價K棒將給更高的權重  
+
+EMA 比 SMA 更能提早發現行情轉向
+
+
 ## Project setup
 ```
 yarn install
