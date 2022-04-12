@@ -1,5 +1,7 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <section>
+    <h2>Chart Widget</h2>
+  </section>
   <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
 </template>
 
@@ -15,7 +17,7 @@ export default defineComponent({
 });
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -23,5 +25,15 @@ export default defineComponent({
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
+  section {
+    &:not(:last-child) {
+      margin-bottom: 160px;
+    }
+
+    h2 {
+      margin-bottom: 40px;
+    }
+  }
 }
 </style>
