@@ -1,28 +1,18 @@
 <template>
+  <TickerTape :options="tickerTapeOptions"/>
   <section>
-     <Chart
-      :options="{
-        symbol: 'NYSE:DIS',
-        theme: 'dark',
-        studies: [
-          'BB@tv-basicstudies',
-          'CCI@tv-basicstudies', // Commodity Channel Index overbought/oversold
-          'MACD@tv-basicstudies',
-          'MAExp@tv-basicstudies' // Moving Average Exponential
-        ],
-        details: true,
-      }"
-     />
+    <Chart :options="chartOptions" />
   </section>
   <section>
-    <TechnicalAnalysis :options="{interval: '1D', symbol:'NYSE:DIS', isTransparent: true, showIntervalTabs: false}" />
+    <TechnicalAnalysis :options="technicalanalysisOptions" />
   </section>
   <!-- <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/> -->
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { Chart, TechnicalAnalysis } from 'vue-tradingview-widgets';
+import { Chart, TickerTape, TechnicalAnalysis } from 'vue-tradingview-widgets';
+import { chartOptions, technicalanalysisOptions, tickerTapeOptions } from '@/tw-config';
 // import HelloWorld from './components/HelloWorld.vue';
 
 export default defineComponent({
@@ -30,8 +20,16 @@ export default defineComponent({
   components: {
     Chart,
     TechnicalAnalysis,
+    TickerTape,
     // HelloWorld
-  }
+  },
+  setup() {
+    return {
+      chartOptions,
+      technicalanalysisOptions,
+      tickerTapeOptions,
+    };
+  },
 });
 </script>
 
